@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.UserInfoActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/cancel_img"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/cancel"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:layout_toRightOf="@+id/cancel_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="编辑个人资料"
+            android:textSize="18sp"
+            android:textColor="@color/dark_black"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageView
+            android:id="@+id/save_img"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/save"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="20dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/header_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/header_default"/>
+
+    <ImageView
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:src="@drawable/camera"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@id/relative_layout"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/editText_username"
+            app:met_baseColor="@color/gray"
+            app:met_iconPadding="2dp"
+            app:met_textColor="@color/dark_black"
+            app:met_primaryColor="@color/blue"
+            app:met_errorColor="@color/dark_gray"
+            app:met_clearButton="true"
+            app:met_iconLeft="@drawable/me_icon"
+            app:met_singleLineEllipsis="false"
+            android:layout_width="match_parent"
+            android:lines="1"
+            android:hint="用户名"
+            app:met_floatingLabelText="用户名"
+            app:met_floatingLabel="highlight"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            app:met_autoValidate="true"
+            app:met_minCharacters="1"
+            app:met_maxCharacters="20"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sex"
+                android:layout_marginLeft="15dp"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/male_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="男"/>
+
+                <RadioButton
+                    android:id="@+id/female_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="女"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/editText_signature"
+            app:met_baseColor="@color/gray"
+            app:met_textColor="@color/dark_black"
+            app:met_iconPadding="2dp"
+            app:met_primaryColor="@color/blue"
+            app:met_errorColor="@color/dark_gray"
+            app:met_clearButton="true"
+            app:met_iconLeft="@drawable/signature"
+            app:met_singleLineEllipsis="false"
+            android:layout_width="match_parent"
+            android:lines="1"
+            android:hint="签名"
+            app:met_floatingLabelText="签名"
+            app:met_floatingLabel="highlight"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            app:met_autoValidate="true"
+            app:met_minCharacters="1"
+            app:met_maxCharacters="30"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/region"
+                android:layout_marginLeft="15dp"/>
+
+            <ImageView
+                android:id="@+id/add_addr_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/add2"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/add_addr_text"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue"
+                android:text="添加居住地"
+                android:textSize="16sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/birthday"
+                android:layout_marginLeft="15dp"/>
+
+            <ImageView
+                android:id="@+id/add_birth_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/add2"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/add_birth_text"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue"
+                android:text="添加生日信息"
+                android:textSize="16sp"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

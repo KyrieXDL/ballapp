@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">篮球社区app</string>
+
+    <string name="game">比赛资讯</string>
+    <string name="friends">发现</string>
+    <string name="msg">消息</string>
+    <string name="ball">约球</string>
+    <string name="me">我的</string>
+    <string name="agent_addr">地址：%1$s</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="behavior_sample_title">com.example.administrator.app.SampleTitleBehavior</string>
+    <string name="behavior_main_tab">com.example.administrator.app.behavior.MainTabBehavior</string>
+    <string name="behavior_main_content">com.example.administrator.app.behavior.MainContentBehavior</string>
+
+</resources>

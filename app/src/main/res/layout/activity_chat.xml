@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    tools:context=".activity.ChatActivity">
+
+    <ImageView
+        android:id="@+id/srimgView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="?attr/actionBarDivider"
+        android:background="@color/dark_black"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="TextView"
+        android:background="#fffff0"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="25dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/light_gray"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_toLeftOf="@id/button"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:hint="输入对话"
+            android:textSize="18sp"
+            android:background="@drawable/edit_text"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_toLeftOf="@id/buttonGraph"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="发送" />
+
+        <Button
+            android:layout_alignParentRight="true"
+            android:id="@+id/buttonGraph"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="图片"/>
+
+
+    </RelativeLayout>
+
+    <!--<ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView"
+        app:srcCompat="@color/dadada" />-->
+</RelativeLayout>

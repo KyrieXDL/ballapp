@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Hello MUI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!--标准mui.css-->
+	<link rel="stylesheet" href="../css/mui.min.css">
+	<!--App自定义的css-->
+	<!--<link rel="stylesheet" type="text/css" href="../css/app.css" />-->
+	<style>
+			.mui-btn {
+				display: block;
+				width: 120px;
+				margin: 10px auto;
+			}
+		</style>
+
+</head>
+
+<body>
+
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+			//mui初始化
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			var btnArray = ['否', '是'];
+			mui.confirm('MUI是个好框架，确认？', 'Hello MUI', btnArray, function(e) {
+				if (e.index == 1) {
+					//info.innerText = '你刚确认MUI是个好框架';
+				} else {
+					//info.innerText = 'MUI没有得到你的认可，继续加油'
+				}
+			})
+
+		</script>
+</body>
+
+</html>

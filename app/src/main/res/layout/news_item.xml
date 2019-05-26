@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/news_layout"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:background="@color/white"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+
+    <ImageView
+        android:id="@+id/news_img"
+        android:layout_width="130dp"
+        android:layout_height="110dp"
+        android:src="@drawable/ball"
+        android:layout_gravity="center_vertical"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/news_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/dark_black"
+            android:textSize="16sp"
+            android:text="浓眉：做我想做的事 而不是别人让我做的事"/>
+
+        <TextView
+            android:id="@+id/news_ptime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="12dp"
+            android:text="2019-3-3 03:06"
+            android:textColor="@color/gray"
+            android:textSize="13sp"/>
+    </RelativeLayout>
+
+</LinearLayout>

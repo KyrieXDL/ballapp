@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.NewsDetailActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/arcLayout"
+        android:layout_width="match_parent"
+        android:layout_height="280dp">
+
+    <com.github.florent37.arclayout.ArcLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_alignParentTop="true"
+        app:arc_cropDirection="cropOutside"
+        app:arc_height="30dp"
+        app:arc_position="bottom"
+        android:elevation="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/news_detail_img"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:scaleType="centerCrop"
+             />
+
+    </com.github.florent37.arclayout.ArcLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_below="@+id/arcLayout"
+        android:id="@+id/news_title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_black"
+        android:text="浓眉：做我自己的事，不是别人让我做的事"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/news_title_text">
+        <TextView
+            android:id="@+id/news_ptime_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018 3-4"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/gray"/>
+
+        <TextView
+            android:id="@+id/news_source_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="虎扑体育"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:textColor="@color/gray"/>
+    </RelativeLayout>
+
+    <org.sufficientlysecure.htmltextview.HtmlTextView
+        android:id="@+id/news_detail_text"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:lineHeight="8dp"
+        app:rt_view_text_color="@color/black"
+        android:textAppearance="@android:style/TextAppearance.Small" />
+
+    <com.lilei.springactionmenu.ActionMenu
+        android:id="@+id/actionMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="230dp"
+        android:layout_marginRight="60dp"
+
+        app:circleRadius="25dp"
+        app:dimens="10dp"
+        app:animationDuration="2500"
+        app:expandDirect="expandDirectLeft"
+        app:buttonNormalColor="#ff5bc0de"
+        app:buttonPressColor="#ff39b3d7"
+        app:actionMenuIcon="@drawable/add"
+        app:actionMenuOnIcon="@drawable/close"
+        />
+
+    <com.ldoublem.loadingviewlib.view.LVBlazeWood
+        android:id="@+id/lvBlaze"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerInParent="true"
+        ></com.ldoublem.loadingviewlib.view.LVBlazeWood>
+
+</RelativeLayout>
